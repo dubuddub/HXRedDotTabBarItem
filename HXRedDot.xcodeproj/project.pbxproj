@@ -544,6 +544,7 @@
 				B597EE111E1B8A4B00EED00F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B597EE121E1B8A4B00EED00F /* Build configuration list for PBXNativeTarget "HXRedDotTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +553,7 @@
 				B597EE141E1B8A4B00EED00F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B597EE151E1B8A4B00EED00F /* Build configuration list for PBXNativeTarget "HXRedDotUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +562,7 @@
 				B597EE171E1B8A4B00EED00F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
