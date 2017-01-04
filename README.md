@@ -10,6 +10,8 @@
 
 import "UITabBarItem+HXRedDot.h"
 
+`
+`
 @property (strong, nonatomic) UILabel *label;
 
 // items[i] control which item u want to creat reddot
