@@ -11,8 +11,6 @@
 
 @interface ViewController1 ()
 
-@property (strong, nonatomic) UILabel *label;
-
 @end
 
 @implementation ViewController1
@@ -23,18 +21,28 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    UIImageView *imageViewInTabBarItem = self.tabBarController.tabBar.items[1].imageView;
-    self.label = [self.tabBarController.tabBarItem creatRedDot:6 image:imageViewInTabBarItem];
+
 }
 
 - (IBAction)creatRedDot:(id)sender {
     
-    self.label.hidden = NO;
+    UIImageView *imageViewInTabBarItem = self.tabBarController.tabBar.items[1].imageView;
+
+    [self.tabBarController.tabBarItem creatRedDot:6 image:imageViewInTabBarItem];
     
 }
 - (IBAction)remove:(id)sender {
     
-    self.label.hidden = YES;
+    UIImageView *imageViewInTabBarItem = self.tabBarController.tabBar.items[1].imageView;
+    
+    for (UIView *subview in imageViewInTabBarItem.subviews) {
+        
+        if ([subview isKindOfClass:[UILabel class]]) {
+            [subview removeFromSuperview];
+        }
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

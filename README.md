@@ -7,25 +7,22 @@
 ###1 creatRedDot
 
 ```
-import "UITabBarItem+HXRedDot.h"
-
-@property (strong, nonatomic) UILabel *label;
-```
-
-
-```
-// items[i] control which item u want to creat reddot
-
 UIImageView *imageViewInTabBarItem = self.tabBarController.tabBar.items[1].imageView;
 
-self.label = [self.tabBarController.tabBarItem creatRedDot:6 image:imageViewInTabBarItem];
-
-self.label.hidden = NO;
-
+[self.tabBarController.tabBarItem creatRedDot:6 image:imageViewInTabBarItem];
 ```
+
 
 ###2 removeRedDot
 ```
-self.label.hidden = YES;
+UIImageView *imageViewInTabBarItem = self.tabBarController.tabBar.items[1].imageView;
+
+for (UIView *subview in imageViewInTabBarItem.subviews) {
+
+if ([subview isKindOfClass:[UILabel class]]) {
+[subview removeFromSuperview];
+}
+}
+
 ```
 
